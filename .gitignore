@@ -6,4 +6,4 @@
 package-lock.json
 
 app/css/
-node_modeles/
+node_modules/
