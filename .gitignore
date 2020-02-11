@@ -1,0 +1,9 @@
+.DS_Store
+.AppleDouble
+.LSOverride
+.vs
+
+package-lock.json
+
+app/css/
+node_modeles/
