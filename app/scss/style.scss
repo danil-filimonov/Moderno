@@ -196,6 +196,7 @@
         font-size: 14px;
         display: flex;
         align-items: center;
+        max-width: 245px;
         span {
             width: 30px;
             height: 30px;
@@ -205,9 +206,41 @@
             background-size: cover;
             background-position: center;
             background-repeat: no-repeat;
+            background-color: #ccc;
         }
     }
     &-stars {
         font-family: 'Roboto-Regular', sans-serif;
+        font-size: 12px;
+        color: #B0BEC5;
+        span {
+            color: $bg;
+        }
+    }
+}
+
+// PRODUCTS SLIDER
+
+.products__slider {
+    padding: 70px 0;
+    .slick-dots {
+        text-align: center;
+        margin-top: 15px;
+        li {
+            display: inline-block;
+            margin: 0 4px;
+            &.slick-active {
+                button {
+                    background-color: $green-color;
+                }
+            }
+            button {
+                font-size: 0;
+                width: 16px;
+                height: 16px;
+                border-radius: 50%;
+                border: none;
+            }
+        }
     }
 }
