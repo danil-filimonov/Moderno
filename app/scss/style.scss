@@ -310,3 +310,42 @@
         width: 86px;
     }
 }
+
+
+// AUTHORS
+
+.authors {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 760px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    &__box {
+        max-width: 650px;
+        width: 100%;
+        min-height: 216px;
+        background-color: $green-color;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &-title {
+            font-size: 30px;
+            line-height: 36px;
+            color: #fff;
+            max-width: 265px;
+            margin-right: 45px;
+            span {
+                @include f700;
+            }
+        }
+        &-link {
+            font-size: 18px;
+            line-height: 30px;
+            color: $bg;
+            background-color: #fff;
+            padding: 20px 40px;
+        }
+    }
+}
