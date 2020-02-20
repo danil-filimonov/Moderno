@@ -62,7 +62,7 @@
     min-height: 530px;
 }
 .search__inner {
-    font-family: 'Roboto', sans-serif;
+    @include f500;
     padding: 140px 0 100px;
     text-align: center;
     color: #fff;
@@ -120,8 +120,7 @@
         background-color: #fff;
         border: none;
         padding: 12px 25px;
-        font-family: 'Roboto', sans-serif;
-        font-weight: 500;
+        @include f500;
         font-size: 14px;
         color: $bg;
         cursor: pointer;
@@ -147,8 +146,7 @@
 .product__item {
     max-width: 442px;
     width: 100%;
-    font-family: 'Roboto', sans-serif;
-    font-weight: 500;
+    @include f500;
     color: $bg;
     box-shadow: 0 1px 2px rgba(205, 214, 222, 0.75);
     margin-bottom: 32px;
@@ -240,7 +238,75 @@
                 height: 16px;
                 border-radius: 50%;
                 border: none;
+                cursor: pointer;
             }
         }
+    }
+}
+
+
+// ADVANTAGES
+
+.advantages {
+    background-color: $bg;
+    padding: 70px 0px;
+}
+.advantages__title {
+    color: #fff;
+}
+.advantages__inner {
+    display: flex;
+    justify-content: space-between;
+}
+.advantages__item {
+    max-width: 370px;
+    text-align: center;
+    padding: 0px 15px;
+    &:hover {
+        .advantages__item-image {
+            background-color: $green-color;
+            g {
+                fill: #fff;
+            }
+        }
+        .advantages__item-title {
+            color: $green-color;
+        }
+    }
+    &-image {
+        width: 114px;
+        height: 114px;
+        border-radius: 50%;
+        background-color: #fff;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 0 auto 30px;
+        transition: all .3s linear;
+    }
+    &-title {
+        @include f500;
+        font-size: 24px;
+        color: #fff;
+        margin-bottom: 20px;
+        transition: all .3s linear;
+    }
+    &-text {
+        color: #B0BEC5;
+    }
+}
+.advantages-icon1 {
+    svg {
+        width: 60px;
+    }
+}
+.advantages-icon2 {
+    svg {
+        width: 71px;
+    }
+}
+.advantages-icon3 {
+    svg {
+        width: 86px;
     }
 }

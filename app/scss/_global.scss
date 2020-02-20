@@ -39,9 +39,8 @@ ul, li {
     }
 }
 .title {
-    font-family: 'Roboto', sans-serif;
+    @include f700;
     color: $bg;
-    font-weight: 700;
     font-size: 36px;
     text-align: center;
     line-height: 54px;
