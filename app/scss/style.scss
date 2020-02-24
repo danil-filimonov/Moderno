@@ -378,3 +378,156 @@
         background-color: #F8F8F8;
     }
 }
+
+
+// FOOTER
+
+.footer {
+    background-color: $bg;
+    &__inner {
+        padding: 70px 0;
+        display: flex;
+        justify-content: space-between;
+    }
+    &__col {
+        max-width: 270px;
+        width: 100%;
+        &-menu {
+            max-width: 220px;
+        }
+        &-title {
+            font-size: 22px;
+            font-weight: 700;
+            color: #fff;
+            font-family: 'Raleway', sans-serif;
+            padding-bottom: 23px;
+            margin-bottom: 30px;
+            position: relative;
+            &::after {
+                content: '';
+                width: 51px;
+                height: 3px;
+                background-color: $green-color;
+                position: absolute;
+                left: 0;
+                bottom: 0;
+            }
+        }
+        &-text {
+            color: #B7C3C8;
+            margin-bottom: 25px;
+        }
+        &-list {
+            li {
+                position: relative;
+                &::before {
+                    content: '\f105';
+                    position: absolute;
+                    font-family: 'icomoon';
+                    font-size: 22px;
+                    color: $green-color;
+                    left: 0;
+                }
+            }
+            a {
+                color: #B7C3C8;
+                padding-left: 20px;
+                margin-bottom: 10px;
+            }
+        }
+        
+    }
+    &__social {
+        margin-bottom: 25px;
+        li {
+            display: inline-block;
+        }
+        li + li {
+            padding-left: 7px;
+        }
+        a {
+            width: 28px;
+            height: 28px;
+            background-image: url(../images/css_sprites.png);
+        }
+        .icon-twitter {
+            background-position: -28px 0;
+        }
+        .icon-youtube {
+            background-position: -56px 0;
+        }
+        .icon-pinterest {
+            background-position: -84px 0;
+        }
+        .icon-linkedin {
+            background-position: -112px 0;
+        }
+    }
+    &__form {
+        position: relative;
+        &-title {
+            font-size: 20px;
+            color: #fff;
+            margin-bottom: 15px;
+        }
+        input {
+            width: 100%;
+            height: 40px;
+            background-color: #2F3C43;
+            border: none;
+            padding: 0 50px 0 15px;
+            color: #fff;
+            display: block;
+            font-size: 14px;
+            &::placeholder {
+                color: #697378;
+            }
+        }
+        button {
+            position: absolute;
+            width: 40px;
+            height: 40px;
+            background-color: $green-color;
+            border: none;
+            cursor: pointer;
+            right: 0;
+            bottom: 0;
+            &::before {
+                content: '\f124';
+                position: absolute;
+                font-family: 'icomoon';
+                font-size: 22px;
+                color: #fff;
+                top: 8px;
+                right: 11px;
+            }
+        }
+    }
+    &__info {
+        font-family: 'Lato', sans-serif;
+        font-size: 14px;
+        color: #fff;
+        padding: 0 25px;
+        margin-bottom: 20px;
+        position: relative;
+        &::before {
+            content: '\f041';
+            position: absolute;
+            font-family: 'icomoon';
+            font-size: 22px;
+            color: $green-color;
+            left: 0;
+        }
+        &.phone-icon::before {
+            content: '\f095';
+        }
+    }
+    &__copy {
+        padding: 25px 0;
+        border-top: 1px solid #424D53;
+        &-text {
+            text-align: center;
+            color: #919699;
+        }
+    }
+}
