@@ -245,7 +245,7 @@
     top: 90px;
     right: 0;
     width: 268px;
-    z-index: 1;
+    z-index: 4;
     height: 0;
     overflow: hidden;
 }
@@ -356,8 +356,12 @@
 .total-btn-checkout {
     background-color: $red-color;
     width: 123px;
-    margin-left: 4px;
+    margin-left: 3px;
 }
+
+
+
+
 
 // SEARCH
 
@@ -1165,3 +1169,15 @@ button.icon-unsorted {
 .product__item-likes {
     display: none;
 }
+
+
+
+
+
+
+
+
+
+
+
+@import 'media';
