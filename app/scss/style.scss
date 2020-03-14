@@ -359,6 +359,105 @@
     margin-left: 3px;
 }
 
+#login {
+    display: none;
+    background-color: $green-color;
+    max-width: 730px;
+    width: 100%;
+    padding: 88px 0 100px;
+}
+.login__wrapper {
+    form {
+        max-width: 400px;
+        margin: 0 auto;
+    }
+    input {
+        display: block;
+        width: 100%;
+        height: 43px;
+        background-color: #76AE36;
+        border: none;
+        padding: 0 40px;
+        color: #fff;
+        margin-bottom: 8px;
+        font-size: 14px;
+        &::placeholder {
+            color: #fff;
+            font-size: 14px;
+        }
+    }
+    label {
+        position: relative;
+        &::before {
+            position: absolute;
+            color: #fff;
+            font-size: 14px;
+            font-family: 'icomoon';
+            z-index: 1;
+            top: 22px;
+            left: 18px;
+        }
+    }
+    .user-label {
+        &::before {
+            content: '\f007';
+        }
+    }
+    .password-label {
+        &::before {
+            content: '\f023';
+        }
+    }
+    button {
+        width: 139px;
+        padding: 15px 10px;
+        background-color: #fff;
+        border: none;
+        @include f700;
+        font-size: 14px;
+        color: #000;
+        text-align: center;
+        margin-top: 10px;
+        box-shadow: 0 2px 2px #76AE36;
+        cursor: pointer;
+    }
+}
+.login__title {
+    text-align: center;
+    @include f700;
+    font-size: 48px;
+    color: #fff;
+    text-transform: uppercase;
+    line-height: 48px;
+    margin-bottom: 30px;
+}
+.lost-pass {
+    color: #fff;
+    font-size: 18px;
+    margin-top: 20px;
+    display: block;
+}
+.create-acc {
+    width: 250px;
+    background-color: #76AE36;
+    padding: 12px 5px 12px 30px;
+    margin: 10px 0 0 5px;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+    position: relative;
+    &::before {
+        content: '\f044';
+        position: absolute;
+        font-family: 'icomoon';
+        left: 36px;
+        top: 11px;
+    }
+}
+.fancybox-button svg path {
+    fill: #fff;
+}
+
 // SEARCH
 
 .search {
@@ -1489,6 +1588,100 @@ button.icon-unsorted {
         }
     }
 }
+
+
+
+
+// PAGE 404 and ABOUT US
+
+.page-404,
+.about-us {
+    padding-bottom: 130px;
+}
+.page-404__wrapper,
+.about-us__wrapper {
+    background-color: #fff;
+    border: 1px solid #D7D7D7;
+}
+.page-404__head,
+.about-us__head {
+    @include f500;
+    font-size: 24px;
+    color: #444;
+    padding: 20px 10px 22px 28px;
+    border-bottom: 1px solid #D7D7D7;
+}
+.page-404__inner {
+    background-color: $green-color;
+    text-align: center;
+    padding: 70px 50px 100px;
+    color: #fff;
+}
+.page-404__404 {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 800;
+    font-size: 300px;
+    line-height: 300px;
+    margin-right: 85px;
+    text-align: center;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 157px;
+        height: 301px;
+        background-image: url('../images/page-404.png');
+        margin-left: 20px;
+    }
+}
+.page-404__title {
+    font-family: 'Open Sans', sans-serif;
+    font-weight: 400;
+    letter-spacing: 5px;
+    font-size: 30px;
+    line-height: 30px;
+    margin: 25px 0 25px;
+}
+.page-404__text {
+    @include f500;
+    font-size: 18px;
+    max-width: 530px;
+    margin: 0 auto;
+    margin-bottom: 55px;
+}
+.page-404__link {
+    @include f700;
+    font-size: 14px;
+    text-transform: uppercase;
+    color: #fff;
+    border: 1px solid #fff;
+    border-radius: 4px;
+    width: 210px;
+    padding: 15px 5px;
+    letter-spacing: 2px;
+}
+
+.about-us__inner {
+    padding: 0 50px 40px;
+}
+
+.about-us__box {
+    h3 {
+        margin-top: 50px;
+        margin-bottom: 15px;
+        @include f700;
+        font-size: 20px;
+        color: #444;
+    }
+    p {
+        font-size: 15px;
+        color: #707070;
+    }
+}
+
+
+
+
 
 
 

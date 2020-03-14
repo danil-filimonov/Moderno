@@ -33,8 +33,7 @@
                         </div>
                         <div class="header__box">
                             <div class="notifications__box">
-                                <a class="notifications header-circle icon-bell-o "
-                                    href="#"><span>8</span></a>
+                                <a class="notifications header-circle icon-bell-o " href="#"><span>8</span></a>
                                 <div class="notifications__menu">
                                     <a href="#" class="notifications__item icon-bell-o color--icon">
                                         <div class="user__avatar"
@@ -63,8 +62,7 @@
                                 </div>
                             </div>
                             <div class="messages__box">
-                                <a class="messages header-circle icon-envelope-o "
-                                    href="#"><span>5</span></a>
+                                <a class="messages header-circle icon-envelope-o " href="#"><span>5</span></a>
                                 <div class="messages__menu">
                                     <a href="#" class="messages__item icon-envelope-o color--icon">
                                         <div class="user__avatar"
@@ -160,9 +158,10 @@
                                     </ul>
                                 </div>
                             </div>
-                            <a class="header__btn header__btn-login " href="#">Login</a>
-                            <a class="header__btn header__btn-register " href="#">Register</a>
-                            <a class="header__btn header__btn-logout " href="#">Logout</a>
+                            <a class="header__btn header__btn-login" data-fancybox
+                                data-options='{"src": "#login", "touch": false}' href="javascript:;">Login</a>
+                            <a class="header__btn header__btn-register" href="#">Register</a>
+                            <a class="header__btn header__btn-logout" href="#">Logout</a>
                         </div>
                     </div>
                 </div>
@@ -1041,6 +1040,23 @@
                 </div>
             </div>
         </footer>
+    </div>
+
+    <div id="login">
+        <div class="login__wrapper">
+            <div class="login__title">login</div>
+            <form>
+                <label class="user-label">
+                    <input type="text" placeholder="Name" required>
+                </label>
+                <label class="password-label">
+                    <input type="password" placeholder="Password" required>
+                </label>
+                <button type="submit">Submit</button>
+                <a href="#" class="create-acc">Creat An Account?</a>
+                <a href="#" class="lost-pass">Lost Password?</a>
+            </form>
+        </div>
     </div>
 
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
