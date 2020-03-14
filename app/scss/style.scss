@@ -1592,19 +1592,22 @@ button.icon-unsorted {
 
 
 
-// PAGE 404 and ABOUT US
+// PAGE 404 and ABOUT US and CONTACTS
 
 .page-404,
-.about-us {
+.about-us,
+.contact {
     padding-bottom: 130px;
 }
 .page-404__wrapper,
-.about-us__wrapper {
+.about-us__wrapper,
+.contact__wrapper {
     background-color: #fff;
     border: 1px solid #D7D7D7;
 }
 .page-404__head,
-.about-us__head {
+.about-us__head,
+.contact__head {
     @include f500;
     font-size: 24px;
     color: #444;
@@ -1661,7 +1664,8 @@ button.icon-unsorted {
     letter-spacing: 2px;
 }
 
-.about-us__inner {
+.about-us__inner,
+.contact__inner {
     padding: 0 50px 40px;
 }
 
@@ -1679,11 +1683,128 @@ button.icon-unsorted {
     }
 }
 
-
-
-
-
-
+.contact__head {
+    padding-left: 50px;
+}
+.contact__map {
+    margin: 33px 0 55px;
+    iframe {
+        width: 100%;
+        height: 415px;
+    }
+}
+.contact__box {
+    display: flex;
+    justify-content: space-between;
+}
+.contact__info {
+    max-width: 330px;
+    width: 100%;
+    margin-right: 30px;
+}
+.contact__info-item {
+    margin-bottom: 22px;
+}
+.contact__item-title {
+    @include f500;
+    font-size: 20px;
+    color: $bg;
+    margin-bottom: 18px;
+    padding-bottom: 20px;
+    padding-left: 40px;
+    position: relative;
+    &::after {
+        content: '';
+        position: absolute;
+        width: 44px;
+        height: 4px;
+        background-color: $green-color;
+        bottom: 0;
+        left: 40px;
+    }
+    &::before {
+        position: absolute;
+        font-family: 'icomoon';
+        font-size: 24px;
+        color: $green-color;
+        top: 0;
+        left: 0;
+    }
+}
+.contact-map-marker {
+    &::before {
+        content: '\f041';
+    }
+}
+.contact-phone {
+    &::before {
+        content: '\f095';
+    }
+}
+.contact-email {
+    &::before {
+        content: '\f003';
+    }
+}
+.contact__item-content {
+    padding-left: 40px;
+    color: #707070;
+    font-size: 15px;
+    max-width: 275px;
+}
+.contact__form {
+    width: 100%;
+    textarea {
+        width: 100%;
+        background-color: #F1F4F5;
+        border: none;
+        padding: 12px 17px;
+        height: 190px;
+        resize: none;
+        margin-bottom: 20px;
+        &::placeholder {
+            font-size: 15px;
+            color: #7A7A7A;
+        }
+    }
+    button {
+        width: 190px;
+        padding: 16px 5px;
+        background-color: $green-color;
+        border: none;
+        @include f700;
+        font-size: 16px;
+        color: #fff;
+        text-transform: uppercase;
+        cursor: pointer;
+    }
+}
+.contact__form-title {
+    @include f500;
+    font-size: 24px;
+    color: #333;
+    margin-bottom: 22px;
+}
+.contact__form-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 28px;
+    input {
+        max-width: 350px;
+        width: 100%;
+        height: 43px;
+        background-color: #F1F4F5;
+        border: none;
+        padding: 0 17px;
+        &::placeholder {
+            font-size: 15px;
+            color: #7A7A7A;
+        }
+        & + input {
+            margin-left: 25px;
+        }
+    }
+}
 
 
 
