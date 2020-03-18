@@ -854,24 +854,28 @@
             display: inline-block;
         }
         li + li {
-            padding-left: 7px;
+            margin-left: 5px;
         }
         a {
-            width: 28px;
-            height: 28px;
+            width: 26px;
+            height: 26px;
+            border-radius: 3px;
             background-image: url(../images/css_sprites.png);
         }
+        .facebook-icon {
+            background-position: 0 -1px;
+        }
         .twitter-icon {
-            background-position: -28px 0;
+            background-position: -29px -1px;
         }
         .youtube-icon {
-            background-position: -56px 0;
+            background-position: -57px -1px;
         }
         .pinterest-icon {
-            background-position: -84px 0;
+            background-position: -85px -1px;
         }
         .linkedin-icon {
-            background-position: -112px 0;
+            background-position: -113px -1px;
         }
     }
     &__form {
@@ -1815,7 +1819,8 @@ button.icon-unsorted {
 .settings__inner {
     padding-bottom: 100px;
 }
-.settings__tabs {
+.settings__tabs,
+.profile__tabs {
     display: flex;
     justify-content: space-between;
     .tabs {
@@ -2008,6 +2013,213 @@ button.icon-unsorted {
     @include f700;
     &.withdrawals__history-paid {
         color: $green-color;
+    }
+}
+
+
+
+// PROFILE
+
+.profile__inner {
+    display: flex;
+}
+.profile__aside {
+    max-width: 270px;
+    margin-right: 30px;
+}
+.profile__content {
+    width: 100%;
+    margin-bottom: 30px;
+}
+.profile__status {
+    font-size: 13px;
+    color: #70838D;
+    border: 1px solid #ccc;
+    display: inline-block;
+    padding: 0 13px 0 25px;
+    position: relative;
+    &.status-online::before {
+        background-color: $green-color;
+    }
+    &.status-offline::before {
+        background-color: $red-color;
+    }
+    &::before {
+        content: '';
+        position: absolute;
+        width: 9px;
+        height: 9px;
+        border-radius: 50%;
+        top: 7px;
+        left: 9px;
+    }
+}
+
+.profile__social {
+    margin-bottom: 25px;
+    li {
+        display: inline-block;
+    }
+    li + li {
+        margin-left: 3px;
+    }
+    a {
+        width: 26px;
+        height: 26px;
+        border-radius: 3px;
+        background-image: url(../images/css_sprites.png);
+    }
+    .facebook-icon {
+        background-position: 0 -1px;
+    }
+    .twitter-icon {
+        background-position: -29px -1px;
+    }
+    .youtube-icon {
+        background-position: -57px -1px;
+    }
+    .linkedin-icon {
+        background-position: -113px -1px;
+    }
+}
+.profile__aside-btns {
+    margin-bottom: 30px;
+    .message-btn,
+    .follow-btn {
+        width: 100%;
+        text-align: center;
+        font-size: 16px;
+        color: #fff;
+        padding: 16px 5px;
+        border: none;
+        box-shadow: 0 1px 2px #455A64;
+    }
+    .message-btn {
+        background-color: $color-text;
+        @include f500;
+        margin-bottom: 15px;
+        position: relative;
+        &::before {
+            content: '\f003';
+            font-family: 'icomoon';
+            position: absolute;
+            font-size: 16px;
+            top: 15px;
+            left: 55px;
+        }
+    }
+    .follow-btn {
+        background-color: $green-color;
+        @include f700;
+        cursor: pointer;
+    }
+}
+.profile__banner {
+    background-color: #fff;
+    padding: 17px;
+    width: 100%;
+    border: 1px solid #D7D7D7;
+    margin-bottom: 20px;
+}
+.profile__banner-img {
+    height: 332px;
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+.profile__info-line {
+    display: flex;
+    justify-content: space-between;
+    border: 1px solid #DCDCDC;
+    text-align: center;
+}
+.profile__info-item {
+    width: 25%;
+    background-color: #fff;
+    padding: 10px 5px;
+    font-size: 14px;
+    & + .profile__info-item {
+        border-left: 1px solid #DCDCDC;
+    }
+}
+.profile__info-title {
+    @include f500;
+    color: $bg;
+}
+.profile__info-content {
+    color: #707070;
+    &.profile__info-money {
+        color: $bg;
+    };
+}
+.profile__tabs {
+    margin-bottom: 70px;
+    display: flex;
+    .tabs {
+        max-width: 270px;
+        width: 100%;
+        .tab::before {
+            top: 10px;
+            color: #ccc;
+        }
+        .tab.user-icon::before {
+            content: '\f007';
+        }
+        .tab.suitcase-icon::before {
+            content: '\f0f2';
+        }
+        .tab.message-icon::before {
+            content: '\f003';
+        }
+        .tab.comments-icon::before {
+            content: '\f0e6';
+        }
+        .tab.users-icon::before {
+            content: '\f0c0';
+        }
+    }
+    .tabs__content {
+        padding: 0 40px 50px;
+    }
+    .profile__tab-title {
+        margin-top: 35px;
+        @include f700;
+        font-size: 20px;
+        color: $bg;
+        margin-bottom: 20px;
+    }
+    .profile__tab-text {
+        color: #707070;
+    }
+    .skill__box {
+        margin-bottom: 20px;
+    }
+    .skill-info {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 12px;
+    }
+    .skill-name,
+    .skill-percents {
+        @include f500;
+        font-size: 16px;
+        color: $bg;
+    }
+    .skill-percents {
+        @include f700;
+    }
+    .skill-line {
+        background-color: #F4F4F4;
+        width: 100%;
+        height: 15px;
+        border-radius: 4px;
+        span {
+            display: block;
+            height: 15px;
+            border-radius: 4px;
+            background-image: url(../images/progress-bar.jpg);
+            background-repeat: repeat;
+        }
     }
 }
 
