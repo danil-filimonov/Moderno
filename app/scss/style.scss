@@ -1475,6 +1475,34 @@ button.icon-unsorted {
     display: flex;
     justify-content: space-between;
     margin-bottom: 30px;
+    // .product__price-select {
+    //     width: 82px;
+    //     height: 27px;
+    //     border: 1px solid #ccc;
+    //     background-color: #fff;
+    //     font-size: 13px;
+    //     color: #70838D;
+    //     font-family: 'Roboto-Regular', sans-serif;
+    //     &::placeholder {
+    //         color: #707070;
+    //     }
+    // }
+    .jq-selectbox__select {
+        height: 27px;
+        padding: 6px 28px 6px 10px;
+        background: #fff;
+        font-size: 13px;
+        line-height: 14px;
+        color: #70838D;
+    }
+    .jq-selectbox__trigger-arrow {
+        top: 6px;
+        right: 20px;
+    }
+    .jq-selectbox__trigger-arrow::before {
+        color: $green-color;
+        font-size: 13px;
+    }
 }
 .product__price {
     color: $red-color;
@@ -1614,7 +1642,7 @@ button.icon-unsorted {
 .contact__head {
     @include f500;
     font-size: 24px;
-    color: #444;
+    color: $bg;
     padding: 20px 10px 22px 28px;
     border-bottom: 1px solid #D7D7D7;
 }
@@ -1679,7 +1707,7 @@ button.icon-unsorted {
         margin-bottom: 15px;
         @include f700;
         font-size: 20px;
-        color: #444;
+        color: $bg;
     }
     p {
         font-size: 15px;
@@ -1898,25 +1926,19 @@ button.icon-unsorted {
         color: #444;
         margin-right: 15px;
     }
-    input {
-        background-color: #F9F9F9;
-        border: 1px solid #d7d7d7;
-        max-width: 540px;
-        width: 100%;
-        height: 40px;
-        padding: 5px 15px;
-        font-size: 14px;
-        color: #707070;
-    }
+    input,
     select {
         background-color: #F9F9F9;
         border: 1px solid #d7d7d7;
         max-width: 540px;
         width: 100%;
-        height: 40px;
+        height: 42px;
         padding: 5px 15px;
         font-size: 14px;
         color: #707070;
+    }
+    .jq-selectbox {
+        max-width: 540px;
     }
 }
 
@@ -1968,7 +1990,7 @@ button.icon-unsorted {
         display: block;
         border: 1px solid #D7D7D7;
         background-color: #F9F9F9;
-        height: 40px;
+        height: 42px;
         padding: 0 20px;
         &::placeholder {
             color: #707070;
@@ -2222,6 +2244,69 @@ button.icon-unsorted {
         }
     }
 }
+
+// UPLOAD
+
+.upload__inner {
+    background-color: #fff;
+    border: 1px solid #d7d7d7;
+    margin-bottom: 100px;
+    button {
+        padding: 15px 5px;
+        color: #fff;
+        width: 124px;
+        background-color: $green-color;
+        border: none;
+        cursor: pointer;
+        margin-left: 175px;
+        margin-bottom: 20px;
+    }
+}
+.upload__title {
+    padding: 16px 33px 19px;
+    @include f500;
+    font-size: 24px;
+    color: $bg;
+    border-bottom: 1px solid #d7d7d7;
+    margin-bottom: 35px;
+}
+.upload__content {
+    padding: 0 50px 30px 45px;
+}
+.upload__content-line {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+    label {
+        color: #444;
+        min-width: 175px;
+        padding-right: 15px;
+        padding-top: 3px;
+        span {
+            color: $green-color;
+            font-size: 24px;
+        }
+    }
+    input,
+    select,
+    textarea {
+        width: 100%;
+        display: block;
+        border: 1px solid #d7d7d7;
+        background-color: #F9F9F9;
+        height: 42px;
+        padding: 8px 18px;
+        &::placeholder {
+            color: #707070;
+        }
+    }
+    textarea {
+        height: 150px;
+        resize: none;
+    }
+}
+
+
 
 
 

@@ -37,6 +37,8 @@ $(function () {
         $('.icon-th-list').removeClass('filter-active');
     });
 
+    $('input[type=file], select').styler();
+
     $('.menu__btn').on('click', function () {
         $('.menu__list').slideToggle();
         $('.menu__btn').toggleClass('active');
